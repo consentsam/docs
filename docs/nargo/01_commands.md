@@ -22,8 +22,8 @@ keywords:
 
 ```
 Options:
-  -s, --show-ssa        Emit debug information for the intermediate SSA IR
-  -d, --deny-warnings   Quit execution when warnings are emitted
+  --show-ssa        Emit debug information for the intermediate SSA IR
+  --deny-warnings   Quit execution when warnings are emitted
   -h, --help            Print help
 ```
 
@@ -121,7 +121,9 @@ _Arguments_
 ## `nargo test <pattern>`
 
 Nargo will automatically compile and run any functions which have the decorator `#[test]` on them if
-you run `nargo test`.
+you run `nargo test`. To print `println` statements in tests, use the `--show-output` flag.
+
+Takes an optional `--exact` flag which allows you to select tests based on an exact name.
 
 See an example on the [testing page](./testing).
 
